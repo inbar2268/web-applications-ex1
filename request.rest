@@ -14,3 +14,14 @@ GET http://localhost:3000/posts
 
 ###
 
+PUT http://localhost:3000/posts/673ea14a273b7adae44c7873
+Content-Type: application/json
+
+{
+    "title": "hii",
+    "owner": "hila",
+    "content": "shalom"
+}
+
+###
+
