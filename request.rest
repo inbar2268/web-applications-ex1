@@ -7,10 +7,22 @@ Content-Type: application/json
     "owner": "inbar",
     "content": "hadar"
 }
+###
+POST http://localhost:3000/posts
+Content-Type: application/json
 
+{
+    "title": "hello world 2",
+    "owner": "hadar",
+    "content": "inbar"
+}
 ###
 
 GET http://localhost:3000/posts
 
+
 ###
 
+GET http://localhost:3000/posts/673ed7b8771174faa11b8a98
+
+###
