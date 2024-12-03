@@ -60,6 +60,6 @@ const updatePost = async (req, res) => {
 module.exports = {
   addNewPost,
   getAllPosts,
-  getPostById,
+  getPostById
   updatePost
 };
