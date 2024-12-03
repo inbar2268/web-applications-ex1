@@ -10,9 +10,31 @@ const addNewComment = async (req, res) => {
   }
 };
 
+const updateComment = async (req, res) => {
+
+  const commentId = req.params.id;
+  const { message, owner, postId} = req.body;
+
+  const updatedComment = await CommentsModel.findById(commentId.trim());
+
+  if (updatedComment !== -1) {
+    updatedComment.message = message;
+    updatedComment.owner = owner;
+    updatedComment.postId = postId;
+    try{
+      updatedComment.save();
+      res.status(201).send(updatedComment);
+      } catch (error) {
+        res.status(400).send(error.message);
+      }
+    } else{
+      return res.status(404).json({ message: 'Comment not found' });
+    }
+};
 
 
 
 module.exports = {
-  addNewComment
+  addNewComment,
+  updateComment
 };
