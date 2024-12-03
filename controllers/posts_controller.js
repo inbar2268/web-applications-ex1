@@ -33,9 +33,33 @@ const getPostById = async (req, res) => {
     res.status(400).send(error.message);
   }
 };
+const updatePost = async (req, res) => {
+
+  const postId = req.params.id;
+  const { title, content, owner} = req.body;
+
+  const updatedPost = await PostModel.findById(postId.trim());
+
+  if (updatedPost !== -1) {
+    updatedPost.title = title;
+    updatedPost.content = content;
+    updatedPost.owner = owner;
+    try{
+      updatedPost.save();
+      res.status(201).send(updatedPost);
+      } catch (error) {
+        res.status(400).send(error.message);
+      }
+    } else{
+      return res.status(404).json({ message: 'Post not found' });
+    }
+};
+
+
 
 module.exports = {
   addNewPost,
   getAllPosts,
   getPostById
+  updatePost
 };

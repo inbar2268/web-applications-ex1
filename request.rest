@@ -22,7 +22,16 @@ GET http://localhost:3000/posts
 
 
 ###
-
 GET http://localhost:3000/posts/673ed7b8771174faa11b8a98
+
+###
+PUT http://localhost:3000/posts/673ea14a273b7adae44c7873
+Content-Type: application/json
+
+{
+    "title": "hii",
+    "owner": "hila",
+    "content": "shalom"
+}
 
 ###
