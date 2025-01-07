@@ -44,3 +44,13 @@ Content-Type: application/json
     "postId": "673ed35a771174faa11b8a96"
 }
 ###
+###
+PUT  http://localhost:3000/comments/677cf65a0a80bb9fd62fa095
+Content-Type: application/json
+
+{
+    "message": "worst post ever!",
+    "owner": "hadar",
+    "postId": "673ed35a771174faa11b8a96"
+}
+###
