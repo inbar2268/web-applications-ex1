@@ -35,3 +35,12 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+    "message": "amazing post!",
+    "owner": "hadar",
+    "postId": "673ed35a771174faa11b8a96"
+}
+###
