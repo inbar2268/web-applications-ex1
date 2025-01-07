@@ -4,9 +4,9 @@ POST http://localhost:3000/posts
 Content-Type: application/json
 
 {
-    "title": "hello world",
+    "title": "hello ",
     "owner": "inbar",
-    "content": "hadar"
+    "content": "hiii"
 }
 
 ### get all posts
@@ -21,10 +21,13 @@ PUT http://localhost:3000/posts/677c2857652da2a65a433f3c
 Content-Type: application/json
 
 {
-    "title": "hii",
+    "title": "hello",
     "owner": "hila",
-    "content": "shalom"
+    "content": "be happy"
 }
+###
+### get comments by post id
+GET http://localhost:3000/posts/byOwner/inbar
 
 ### create comment
 POST http://localhost:3000/comments
