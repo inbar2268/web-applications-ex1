@@ -6,5 +6,6 @@ router.post("/", CommentsController.addNewComment);
 router.put("/:id", CommentsController.updateComment);
 router.get("/:id", CommentsController.getCommentByID);
 router.delete("/:id", CommentsController.deleteComment);
+router.get("/byPost/:id", CommentsController.getCommentsByPostID)
 
 module.exports = router;

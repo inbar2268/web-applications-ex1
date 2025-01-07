@@ -14,10 +14,10 @@ GET http://localhost:3000/posts
 
 
 ### get post by id
-GET http://localhost:3000/posts/673ed7b8771174faa11b8a98
+GET http://localhost:3000/posts/677c2857652da2a65a433f3c
 
 ### update post
-PUT http://localhost:3000/posts/673ea14a273b7adae44c7873
+PUT http://localhost:3000/posts/677c2857652da2a65a433f3c
 Content-Type: application/json
 
 {
@@ -37,7 +37,7 @@ Content-Type: application/json
 }
 
 ### update comment
-PUT  http://localhost:3000/comments/677cf65a0a80bb9fd62fa095
+PUT  http://localhost:3000/comments/677d3b9923eb46000c503a1e
 Content-Type: application/json
 
 {
@@ -46,9 +46,12 @@ Content-Type: application/json
     "postId": "673ed35a771174faa11b8a96"
 }
 ### get comment by id
-GET http://localhost:3000/comments/677c2615652da2a65a433f27
+GET http://localhost:3000/comments/677d3b9923eb46000c503a1e
 
 ### delete comment
 DELETE  http://localhost:3000/comments/677ca96014a2c4023efee164
 
-###
+### get comments by post id
+GET http://localhost:3000/comments/byPost/673ed35a771174faa11b8a96
+
+
